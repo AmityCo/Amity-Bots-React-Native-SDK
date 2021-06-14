@@ -20,13 +20,13 @@ import ChatFloatingButton from 'convochatsdk';
 ```
    const exampleRef = createRef(null);
    
-   const getToken = async (userID) => {
+   const getToken = async () => {
    
     const requestOptions = {
      method: "POST",
      headers: { "Content-Type": "application/json" },
      body: JSON.stringify({
-       data: userID,
+       data: dataBody,
      }),
     };
     return fetch(tokensiteURL, requestOptions).then((response) =>
