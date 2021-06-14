@@ -100,7 +100,6 @@ const HomeScreen = ({ navigation }) => {
       <ChatFloatingButton
         ref={exampleRef}
         title={TITLE}
-        userID={EXTERNAL_USER_ID}
         userMetadata={{ name: name, EXTERNAL_ID: EXTERNAL_USER_ID }}
         agentAvatar={AVATAR}
         agentAvatarSize={AVATAR_SIZE}
