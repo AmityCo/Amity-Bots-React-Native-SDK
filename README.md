@@ -108,7 +108,7 @@ In the case of the token has expired. the SDK will handle it the same as request
 
 1. Flow get request authentication
 
-<img src="https://github.com/AmityCo/Amity-Bots-React-Native-SDK/blob/main/readme/Images/flow_secure_chat.png?raw=true" alt="get request authentication" width="800" height="400" />
+<img src="https://github.com/AmityCo/Amity-Bots-React-Native-SDK/blob/master/readme/Images/flow_secure_chat.png?raw=true" alt="get request authentication" width="800" height="400" />
        
 2. Store your private key in your backend server and share us your public key.
 3. Encrypt Payload with private key for get token.
