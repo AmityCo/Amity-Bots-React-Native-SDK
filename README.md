@@ -60,9 +60,6 @@ import ChatFloatingButton from 'convochatsdk';
         sessionTimeOut={sessionTimeOut}
         isTokenInvalid={isTokenInvalid}
         getToken={getToken}
-        buttonIconUrl={buttonIconUrl}
-        ref={exampleRef}
-        title={TITILE}
         userMetadata={{
           name: NAME,
           MDM_ID: MDM_ID,
@@ -70,6 +67,9 @@ import ChatFloatingButton from 'convochatsdk';
           LANG: LANG,
           OS: OS,
         }}
+        buttonIconUrl={buttonIconUrl}
+        ref={exampleRef}
+        title={TITILE}
         agentAvatar={AVATAR}
         agentAvatarSize={AVATAR_SIZE}
         historyDays={HISTORY_DAYS}
@@ -84,12 +84,13 @@ import ChatFloatingButton from 'convochatsdk';
 | KEY                   | DESCRIPTION                                                                                                                   | EXAMPLE                                                                                                         | isRequired? |
 | --------------------- | ----------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | ----------- |
 | eventMessage          | Function to receive events from webchat                                                                                       | const eventMessage = event => {};                                                                               | Required    |
+| sessionTimeOut          | Function to receive events from sessionTimeOut                                                                              | const sessionTimeOut = () => {};                                                                                | Required    |
 | isTokenInvalid        | Function to receive token invalid event from webchat                                                                          | const isTokenInvalid = () => {};                                                                                | Required    |
 | getToken              | Function to get token from customer backend server                                                                            | const getToken = async () => { return fetch(tokensiteURL, requestOptions).then((response) =>response.json());}; | Required    |
+| userMetaData          | JSON contain metadata of user required field Name other field are optional                                                    | {{name: NAME, MDM_ID: MDM_ID, POLICY: POLICY, LANG: LANG, OS: OS}}                                              | Required    |
 | buttonIconUrl         | URL of buble ICON                                                                                                             | png, gif                                                                                                        | Required    |
 | ref                   | Refs are a useful feature that act as a means to reference a DOM element or a class component from within a parent component. |                                                                                                                 | Optional    |
 | title                 | Title of the chat window                                                                                                      | "Live Chat"                                                                                                     | Optional    |
-| userMetaData          | JSON contain metadata of user                                                                                                 |                                                                                                                 | Optional    |
 | agentAvatar           | Profile picture of the chatbot to be shown in chat window when the chatbot response to the user                               |                                                                                                                 | Optional    |
 | agentAvatarSize       | Size of agent's avatar picture                                                                                                |                                                                                                                 | Optional    |
 | historyDays           | Automatically clear history older than a certain number of days and re-send greeting message. Set to 0 to disable.            | 0                                                                                                               | Optional    |
