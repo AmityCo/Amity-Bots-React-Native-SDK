@@ -7,13 +7,15 @@ import { createStackNavigator } from "@react-navigation/stack";
 const Stack = createStackNavigator();
 
 const TITLE = "";
-const name = "";
-const EXTERNAL_USER_ID = "";
+const MDM_ID = "";
+const POLICY = [];
+const NAME = "";
+const LANG = "TH";
+const OS = "";
 const AVATAR = "";
 const AVATAR_SIZE = "40px";
 const HISTORY_DAYS = -1;
 const IS_AUTO_TOGGLE_RICH_MENU = true;
-const RICH_MENU_DIVIDE_BY = 4.9;
 
 const styles = StyleSheet.create({
   container: {
@@ -48,16 +50,12 @@ export default function App() {
   );
 }
 
-const tokensiteURL = "";
-const datBody = "";
-
 const getToken = async () => {
-  // POST request using fetch inside useEffect React hook
   const requestOptions = {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      data: datBody,
+      data: dataBody,
     }),
   };
   return fetch(tokensiteURL, requestOptions).then((response) =>
@@ -73,6 +71,10 @@ const HomeScreen = ({ navigation }) => {
     callCloseWebChat();
   };
 
+  const sessionTimeOut = () => {
+    console.log("session timeout");
+  };
+
   const callOpenWebChat = () => {
     exampleRef.current.openWebChat();
   };
@@ -82,6 +84,7 @@ const HomeScreen = ({ navigation }) => {
   };
 
   const isTokenInvalid = () => {
+    console.log("invalid token");
     exampleRef.current.closeWebChat();
   };
 
@@ -100,14 +103,19 @@ const HomeScreen = ({ navigation }) => {
       <ChatFloatingButton
         ref={exampleRef}
         title={TITLE}
-        userID={EXTERNAL_USER_ID}
-        userMetadata={{ name: name, EXTERNAL_ID: EXTERNAL_USER_ID }}
+        userMetadata={{
+          name: NAME,
+          MDM_ID: MDM_ID,
+          POLICY: POLICY,
+          LANG: LANG,
+          OS: OS,
+        }}
         agentAvatar={AVATAR}
         agentAvatarSize={AVATAR_SIZE}
         historyDays={HISTORY_DAYS}
         isAutoToggleRichMenu={IS_AUTO_TOGGLE_RICH_MENU}
-        richMenuDivideBy={RICH_MENU_DIVIDE_BY}
         eventMessage={eventMessage}
+        sessionTimeOut={sessionTimeOut}
         isTokenInvalid={isTokenInvalid}
         getToken={getToken}
         headerBackgroundColor={"#000"}
