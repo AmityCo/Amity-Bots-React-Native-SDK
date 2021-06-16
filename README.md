@@ -47,7 +47,11 @@ import ChatFloatingButton from 'convochatsdk';
      exampleRef.current.openWebChat();
     };
 
-   const callCloseWebChat = () => {
+   const sessionTimeOut = () => {
+     exampleRef.current.closeWebChat();
+    };
+    
+   const isTokenInvalid = () => {
      exampleRef.current.closeWebChat();
     };
 
