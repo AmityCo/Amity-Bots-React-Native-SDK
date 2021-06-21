@@ -6,7 +6,6 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 const Stack = createStackNavigator();
 
-const TITLE = "";
 const MDM_ID = "";
 const POLICY = [];
 const NAME = "";
@@ -102,7 +101,6 @@ const HomeScreen = ({ navigation }) => {
       </View>
       <ChatFloatingButton
         ref={exampleRef}
-        title={TITLE}
         userMetadata={{
           name: NAME,
           MDM_ID: MDM_ID,
@@ -118,11 +116,9 @@ const HomeScreen = ({ navigation }) => {
         sessionTimeOut={sessionTimeOut}
         isTokenInvalid={isTokenInvalid}
         getToken={getToken}
-        headerBackgroundColor={"#000"}
-        headerTextColor={"#fff"}
         style={styles.floatinBtn}
         buttonIconUrl={
-          "https://s3.amazonaws.com/upload.convolab.ai/webchat-reactnative/images/Liquid-Lightbulb-Animation-V2-800x600-1.gif"
+          "https://s3.amazonaws.com/upload.convolab.ai/axachat/icon/Emma-Bubble.png?fbclid=IwAR2vU_vlmjkEPoVtRe4mBLGtgjId3r1npm4RrSwT4sRgzP1f5mFKeQdz3F8"
         }
       />
     </View>

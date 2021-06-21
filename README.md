@@ -9,7 +9,7 @@
 ## Install package
 
 ```
-npm install ./convochatsdk-2.0.5.tgz
+npm install ./convochatsdk-2.0.7.tgz
 ```
 
 ## Import package
@@ -73,13 +73,10 @@ import ChatFloatingButton from 'convochatsdk';
         }}
         buttonIconUrl={buttonIconUrl}
         ref={exampleRef}
-        title={TITILE}
         agentAvatar={AVATAR}
         agentAvatarSize={AVATAR_SIZE}
         historyDays={HISTORY_DAYS}
         isAutoToggleRichMenu={IS_AUTO_TOGGLE_RICH_MENU}
-        headerBackgroundColor={HEADER_BACKGROUND_COLOR}
-        headerTextColor={HEADER_TEXT_COLOR}
         style={STYLES}
       />
 
