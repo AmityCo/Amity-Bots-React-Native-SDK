@@ -37,10 +37,6 @@ import ChatFloatingButton from 'convochatsdk';
      response.json()
     );
    };
-   
-   const onParametersError = (parameters) => {
-     console.log(parameters);
-    };
 
    const eventMessage = (event) => {
      navigation.navigate("Payment", { name: "Payment" });
@@ -75,7 +71,6 @@ import ChatFloatingButton from 'convochatsdk';
           LANG: LANG,
           OS: OS,
         }}
-        onParametersError={onParametersError}
         buttonIconUrl={buttonIconUrl}
         ref={exampleRef}
         agentAvatar={AVATAR}
@@ -95,7 +90,6 @@ import ChatFloatingButton from 'convochatsdk';
 | getToken              | Function to get token from customer backend server                                                                            | const getToken = async () => { return fetch(tokensiteURL, requestOptions).then((response) =>response.json());}; | Required    |
 | userMetaData          | JSON contain metadata of user required field Name other field are optional                                                    | {{name: "name", MDM_ID: "mdm_id", POLICY: ["a","b"], LANG: "TH", OS: "iOS"}}                                              | Required    |
 | buttonIconUrl         | URL of buble ICON                                                                                                             | png, gif                                                                                                        | Required    |
-| onParametersError         | Error handling for check parameters are correct.                                                                                                           | const onParametersError = (parameters) => {};                                                                                                        | Required    |
 | ref                   | Refs are a useful feature that act as a means to reference a DOM element or a class component from within a parent component. |                                                                                                                 | Optional    |                                                                                        | Optional    |
 | agentAvatar           | Profile picture of the chatbot to be shown in chat window when the chatbot response to the user                               |                                                                                                                 | Optional    |
 | agentAvatarSize       | Size of agent's avatar picture                                                                                                |                                                                                                                 | Optional    |
