@@ -9,7 +9,7 @@
 ## Install package
 
 ```
-npm install ./convochatsdk-2.1.7.tgz
+npm install ./convochatsdk-2.1.9.tgz
 ```
 
 ## Import package
@@ -46,6 +46,9 @@ import ChatFloatingButton from 'convochatsdk';
    const callOpenWebChat = () => {
      exampleRef.current.openWebChat();
     };
+    
+    const onLoadError = (error) => {
+    };
 
    const sessionTimeOut = () => {
      exampleRef.current.closeWebChat();
@@ -76,6 +79,7 @@ import ChatFloatingButton from 'convochatsdk';
         agentAvatar={AVATAR}
         agentAvatarSize={AVATAR_SIZE}
         historyDays={HISTORY_DAYS}
+        onLoadError={onLoadError}
         isAutoToggleRichMenu={IS_AUTO_TOGGLE_RICH_MENU}
         style={STYLES}
       />
