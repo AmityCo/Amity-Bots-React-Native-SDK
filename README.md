@@ -19,6 +19,15 @@ import ChatFloatingButton from 'convochatsdk';
 
 ```
 
+## How to change Environment between DEV|UAT|PROD
+
+```
+    <ChatFloatingButton
+        ENV={"DEV"} //or UAT or PRD
+      />
+
+```
+
 ### How to use ChatFloatingButton component
 
 ```
@@ -63,6 +72,7 @@ import ChatFloatingButton from 'convochatsdk';
     };
 
     <ChatFloatingButton
+        ENV={"DEV"} //or UAT or PRD
         eventMessage={eventMessage}
         sessionTimeOut={sessionTimeOut}
         isTokenInvalid={isTokenInvalid}
