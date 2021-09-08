@@ -1,4 +1,4 @@
-import React, { createRef } from "react";
+import React, { createRef, useState } from "react";
 import { StyleSheet, View, Text } from "react-native";
 import ChatFloatingButton from "convochatsdk";
 import { NavigationContainer } from "@react-navigation/native";
@@ -6,11 +6,9 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 const Stack = createStackNavigator();
 
-const MDM_ID = "";
-const POLICY = [];
-const NAME = "";
-const LANG = "TH";
-const OS = "";
+const NAME = "TESTAPP+" + Platform.OS;
+const OS = Platform.OS;
+const IS_AUTO_TOGGLE_RICH_MENU = true;
 const AVATAR = "";
 const AVATAR_SIZE = "40px";
 const HISTORY_DAYS = -1;
@@ -63,6 +61,7 @@ const getToken = async () => {
 };
 
 const HomeScreen = ({ navigation }) => {
+  const [name, setNAME] = useState(NAME);
   const exampleRef = createRef(null);
 
   const eventMessage = (event) => {
@@ -100,12 +99,14 @@ const HomeScreen = ({ navigation }) => {
         </Text>
       </View>
       <ChatFloatingButton
+        ENV="DEV"
         ref={exampleRef}
         userMetadata={{
-          name: NAME,
-          MDM_ID: MDM_ID,
-          POLICY: POLICY,
-          LANG: LANG,
+          externalUserId: externalUserId,
+          name: name,
+          MDM_ID: mdmID,
+          POLICY: selectedPolicy,
+          LANG: lang,
           OS: OS,
         }}
         agentAvatar={AVATAR}
