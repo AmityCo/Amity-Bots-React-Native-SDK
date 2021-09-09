@@ -78,6 +78,7 @@ import ChatFloatingButton from 'convochatsdk';
         isTokenInvalid={isTokenInvalid}
         getToken={getToken}
         userMetadata={{
+          externalUserId:externalUserId,
           name: NAME,
           MDM_ID: MDM_ID,
           POLICY: POLICY,
