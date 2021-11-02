@@ -9,7 +9,7 @@
 ## Install package
 
 ```
-npm install ./convochatsdk-2.2.6.tgz
+npm install ./convochatsdk-2.2.7.tgz
 ```
 
 ## Import package
