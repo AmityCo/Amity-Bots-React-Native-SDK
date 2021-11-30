@@ -12,6 +12,15 @@
 npm install ./convochatsdk-2.3.1.tgz
 ```
 
+## JSON Overwrite version
+
+```
+for JSON overwrite version use this SDK
+
+npm install ./convochatsdk-2.3.2-jsonow.tgz
+
+- this SDK will overwrite USER_INFO whatever it pass to SDK
+```
 ## Import package
 
 ```
