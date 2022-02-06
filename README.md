@@ -12,6 +12,12 @@
 npm install ./convochatsdk-2.3.7.tgz
 ```
 
+## Install Log version 
+
+```
+npm install ./convochatsdk-2.3.7-log.tgz
+```
+
 ## Import package
 
 ```
