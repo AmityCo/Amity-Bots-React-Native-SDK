@@ -3,20 +3,15 @@
 ## Package Used
 
 - React Native Webview [Official](https://github.com/react-native-webview/react-native-webview)
-- react-native-safe-area-context [Official](https://github.com/th3rdwave/react-native-safe-area-context)
 - React Ref [Official](https://reactjs.org/docs/refs-and-the-dom.html)
-
+- `react-native-safe-area-context` [Official](https://github.com/th3rdwave/react-native-safe-area-context)
+- `@bugfender/rn-bugfender` [Official](https://github.com/bugfender/rn-bugfender#readme)
 ## Install package
 
 ```
-npm install ./convochatsdk-2.3.7.tgz
+npm install ./convochatsdk-2.4.3.tgz
 ```
 
-## Install Log version 
-
-```
-npm install ./convochatsdk-2.3.7-log.tgz
-```
 
 ## Import package
 
@@ -32,6 +27,12 @@ import ChatFloatingButton from 'convochatsdk';
         ENV={"DEV"} //or UAT or PRD
       />
 
+```
+
+## How to enable Logging
+
+```
+    <ChatFloatingButton logging />
 ```
 
 ### How to use ChatFloatingButton component
@@ -117,6 +118,7 @@ import ChatFloatingButton from 'convochatsdk';
 | historyDays           | Automatically clear history older than a certain number of days and re-send greeting message. Set to 0 to disable.            | 0                                                                                                               | Optional    |
 | isAutoToggleRichMenu  | auto open rich menu                                                                                                           |                                                                                                                 | Optional    |
 | style                 | Style of buble button                                                                                                         | floatingBtn: { position: 'absolute', bottom: 50, right: 10, width: 80, height: 80 }                             | Optional    |
+| logging                 |send log to server                                     | `<ChatFloatingButton logging />`  | Optional    |
 
 ### GET TOKEN for verification
 
