@@ -74,10 +74,6 @@ import ChatFloatingButton from 'convochatsdk';
      exampleRef.current.closeWebChat();
     };
 
-   const isTokenInvalid = () => {
-     exampleRef.current.closeWebChat();
-    };
-
     <ChatFloatingButton
         ENV={"DEV"} //or UAT or PRD
         eventMessage={eventMessage}
